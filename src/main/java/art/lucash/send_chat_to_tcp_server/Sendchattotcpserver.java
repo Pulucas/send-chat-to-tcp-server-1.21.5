@@ -22,7 +22,7 @@ public class Sendchattotcpserver implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world from Send Chat To TCP Server!");
-		forwardingServer = new ChatForwardingServer(25586);
+		forwardingServer = new ChatForwardingServer(25585);
 		forwardingServer.start();
 		ServerMessageEvents.CHAT_MESSAGE.register((message, sender, params) -> {
 			final String content = message.getContent().getString();
