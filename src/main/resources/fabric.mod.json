@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "send-chat-to-tcp-server",
+	"version": "${version}",
+	"name": "Send chat to tcp server",
+	"description": "This sends chat to a tcp server running on port 25585",
+	"authors": [
+		"GreenAquaWind"
+	],
+	"contact": {
+		"homepage": "https://lucash.art/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/send-chat-to-tcp-server/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"art.lucash.send_chat_to_tcp_server.Sendchattotcpserver"
+		],
+		"client": [
+			"art.lucash.send_chat_to_tcp_server.SendchattotcpserverClient"
+		]
+	},
+	"mixins": [
+		"send-chat-to-tcp-server.mixins.json",
+		{
+			"config": "send-chat-to-tcp-server.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

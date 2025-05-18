@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "art.lucash.send_chat_to_tcp_server.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
